@@ -1,0 +1,5 @@
+{
+  "name": "TLS-Dashboard",
+  "description": "Dashboard en tiempo real de los registros EMAÚS (Neon Postgres).",
+  "requestFramePermissions": []
+}
