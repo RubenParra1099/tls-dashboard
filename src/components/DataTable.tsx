@@ -10,7 +10,8 @@ import {
   Phone,
   Copy,
   Check,
-  Calendar
+  Calendar,
+  MessageCircle
 } from 'lucide-react';
 
 interface DataTableProps {
@@ -376,6 +377,18 @@ export const DataTable: React.FC<DataTableProps> = ({
                               <Copy className="w-3 h-3" />
                             )}
                           </button>
+                        )}
+
+                        {row['Teléfono'] && (
+                          <a
+                            href={`https://wa.me/52${String(row['Teléfono']).replace(/\D/g, '').slice(-10)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Mandar mensaje de WhatsApp"
+                            className="p-1 rounded text-[#128C4A] dark:text-[#25D366] hover:bg-[#25D366]/15 transition-colors"
+                          >
+                            <MessageCircle className="w-3.5 h-3.5" />
+                          </a>
                         )}
                       </div>
                     </td>
