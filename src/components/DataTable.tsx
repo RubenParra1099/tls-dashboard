@@ -357,7 +357,7 @@ export const DataTable: React.FC<DataTableProps> = ({
                     <td className="py-3 px-3.5 whitespace-nowrap">
                       <div className="flex items-center gap-2">
                         <a
-                          href={`tel:${row['Teléfono']}`}
+                          href={`tel:${String(row['Teléfono'] || '').replace(/\D/g, '')}`}
                           className="font-mono text-xs text-[#1C1A17] dark:text-white hover:text-[#E09D1B] dark:hover:text-[#FDB82F] font-medium hover:underline flex items-center gap-1"
                         >
                           <Phone className="w-3 h-3 text-[#736E67] dark:text-[#8C867B]" />
